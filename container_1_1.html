@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMM</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon (2).ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/common_res.css">
+    <link rel="stylesheet" href="css/sub_common.css">
+    <link rel="stylesheet" href="css/container_1.css">
+    <link rel="stylesheet" href="css/container_1_res.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/sub.js"></script>
+    <script src="js/aos.js"></script>
+</head>
+<body class="pg1-0-0">
+    <div id="skip">
+        <a href="#main-container">본문 바로가기</a>
+        <a href="#hmm-gnb">주메뉴 바로가기</a>
+        <a href="#hmm-lnb">서브메뉴 바로가기</a>
+    </div>
+    <header id="header">
+        <div class="wrap header-wrap clearfix">
+            <h1 class="main-logo"><a href="index.html"><span class="sound-only">hmm로고</span></a></h1>
+            <div class="m-open-btn wh"><i class="fa-solid fa-bars-staggered"></i><span class="sound-only">주메뉴 열기</span></div>
+            <nav class="global-navigation">
+                <h2 class="sound-only">주메뉴</h2>
+                <ol id="hmm-gnb" class="clearfix">
+                    <li class="depth1">
+                        <a href="#">회사소개</a>
+                        <ol class="depth2">
+                            <li><a href="#">ABOUT US</a></li>
+                            <li><a href="#">PR</a></li>
+                            <li><a href="#">채용정보</a></li>
+                        </ol>
+                    </li>
+                    <li class="depth1">
+                        <a href="container_1_1.html">컨테이너</a>
+                        <ol class="depth2">
+                            <li><a href="container_1_1.html">컨테이너 소개</a></li>
+                            <li><a href="#">운송 및 화물 종류</a></li>
+                            <li><a href="#">관련 규정</a></li>
+                        </ol>
+                    </li>
+                    <li class="depth1">
+                        <a href="#">벌크</a>
+                        <ol class="depth2">
+                            <li><a href="#">벌크선의 종류</a></li>
+                            <li><a href="#">벌크 e-business</a></li>
+                        </ol>
+                    </li>
+                    <li class="depth1">
+                        <a href="#">투자정보</a>
+                        <ol class="depth2">
+                            <li><a href="#">IR HOME</a></li>
+                            <li><a href="#">투자 자료실</a></li>
+                            <li><a href="#">IR 미팅 신청</a></li>
+                        </ol>
+                    </li>
+                    <li class="depth1">
+                        <a href="#">사회공헌</a>
+                        <ol class="depth2">
+                            <li><a href="#">윤리경영</a></li>
+                            <li><a href="#">지속가능경영</a></li>
+                        </ol>
+                    </li>
+                    <li class="depth1">
+                        <a href="#">고객지원</a>
+                        <ol class="depth2">
+                            <li><a href="#">Office 목록</a></li>
+                            <li><a href="#">eBiz</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Q&A</a></li>
+                            <li><a href="#">안전보건 의견제안</a></li>
+                        </ol>
+                    </li>
+                    <li class="depth1">
+                        <a href="#">LOCALSITE</a>
+                        <ol class="depth2">
+                            <li><a href="#">EUROPE MIDDLE EAST</a></li>
+                            <li><a href="#">ASIA</a></li>
+                            <li><a href="#">AMEFICAS</a></li>
+                        </ol>
+                    </li>
+                </ol>
+                <button class="sitemap-open-btn fa-solid fa-bars-staggered"><span class="sound-only">사이트맵</span></button>
+                <div class="mobile">
+                    <div class="m-gnb-hd">
+                        <ul class="m-language-btn clearfix gr-bg">
+                            <li><a href="#">KR</a></li>
+                            <li><a href="#">EN</a></li>
+                        </ul>
+                        <div class="m-close-btn"><i class="fa-solid fa-xmark"></i><span class="sound-only">주메뉴 닫기</span></div>
+                    </div>
+                    <ol id="m-gnb">
+                        <li class="depth1">
+                            <a href="#">회사소개</a>
+                            <ol class="depth2">
+                                <li><a href="#">ABOUT US</a></li>
+                                <li><a href="#">PR</a></li>
+                                <li><a href="#">채용정보</a></li>
+                            </ol>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">컨테이너</a>
+                            <ol class="depth2">
+                                <li><a href="container_1_1.html">컨테이너 소개</a></li>
+                                <li><a href="#">운송 및 화물 종류</a></li>
+                                <li><a href="#">관련 규정</a></li>
+                            </ol>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">벌크</a>
+                            <ol class="depth2">
+                                <li><a href="#">벌크선의 종류</a></li>
+                                <li><a href="#">벌크 e-business</a></li>
+                            </ol>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">투자정보</a>
+                            <ol class="depth2">
+                                <li><a href="#">IR HOME</a></li>
+                                <li><a href="#">투자 자료실</a></li>
+                                <li><a href="#">IR 미팅 신청</a></li>
+                            </ol>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">사회공헌</a>
+                            <ol class="depth2">
+                                <li><a href="#">윤리경영</a></li>
+                                <li><a href="#">지속가능경영</a></li>
+                            </ol>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">고객지원</a>
+                            <ol class="depth2">
+                                <li><a href="#">Office 목록</a></li>
+                                <li><a href="#">eBiz</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Q&A</a></li>
+                                <li><a href="#">안전보건 의견제안</a></li>
+                            </ol>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">LOCALSITE</a>
+                            <ol class="depth2">
+                                <li><a href="#">EUROPE MIDDLE EAST</a></li>
+                                <li><a href="#">ASIA</a></li>
+                                <li><a href="#">AMEFICAS</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </nav>
+            <nav class="utill-menu-navigation clearfix">
+                <h2 class="sound-only">유틸메뉴</h2>
+                <ol class="utill-menu">
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">KOR</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <div id="main-container" class="sub-container container-1-1">
+        <div class="sub-visual container-visual">
+            <div class="sub-contianer-inner">
+                <div class="sub-container-txt" data-aos="zoom-in"  data-aos-duration="1200">
+                    <h2>CONTAINER BUSINESS</h2>
+                    <div class="h2-desc"><span>HMM은 60개 이상의 서비스 항로로 100개 이상의 항구를 연결하며,</span><span>세계 주요선사와 함께 보다 전략적인서비스를 제공하고 있습니다.</span></div>
+                </div>
+            </div>
+        </div>
+        <nav id="hmm-lnb">
+            <h2 class="sound-only">LNB</h2>
+            <div class="wrap clearfix">
+                <div class="lnb-home">
+                    <a href="index.html" class="home">Home</a>
+                </div>
+                <h3 class="sound-only">메인메뉴</h3>
+                <div class="lnb-depth1">
+                    <ul class="lnb-btn">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="container_1_1.html">컨테이너</a></li>
+                        <li><a href="#">벌크</a></li>
+                        <li><a href="#">투자정보</a></li>
+                        <li><a href="#">사회공헌</a></li>
+                        <li><a href="#">고객지원</a></li>
+                        <li><a href="#">LOCALSITE</a></li>
+                    </ul>
+                </div>
+                <h3 class="sound-only">서브메뉴</h3>
+                <div class="lnb-depth2">
+                    <ul class="lnb-btn sub-depth depth2-0">
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">PR</a></li>
+                        <li><a href="#">채용정보</a></li>
+                    </ul>
+                    <ul class="lnb-btn sub-depth depth2-1">
+                        <li><a href="container_1_1.html">컨테이너 소개</a></li>
+                        <li><a href="#">운송 및 화물 종류</a></li>
+                        <li><a href="#">관련 규정</a></li>
+                    </ul>
+                    <ul class="lnb-btn sub-depth depth2-2">
+                        <li><a href="#">벌크선의 종류</a></li>
+                        <li><a href="#">벌크 e-business</a></li>
+                    </ul>
+                    <ul class="lnb-btn sub-depth depth2-3">
+                        <li><a href="#">IR HOME</a></li>
+                        <li><a href="#">투자 자료실</a></li>
+                        <li><a href="#">IR 미팅 신청</a></li>
+                    </ul>
+                    <ul class="lnb-btn sub-depth depth2-4">
+                        <li><a href="#">윤리경영</a></li>
+                        <li><a href="#">지속가능경영</a></li>
+                    </ul>
+                    <ul class="lnb-btn sub-depth depth2-5">
+                        <li><a href="#">Office 목록</a></li>
+                        <li><a href="#">eBiz</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Q&A</a></li>
+                        <li><a href="#">안전보건 의견제안</a></li>
+                    </ul>
+                    <ul class="lnb-btn sub-depth depth2-6">
+                        <li><a href="#">EUROPE MIDDLE EAST</a></li>
+                        <li><a href="#">ASIA</a></li>
+                        <li><a href="#">AMEFICAS</a></li>
+                    </ul>
+                </div>
+                <div class="lnb-depth3">
+                    <ul class="lnb-btn sub-depth depth3-0-0">
+                        <li><a href="#">개요</a></li>
+                        <li><a href="#">연혁</a></li>
+                        <li><a href="#">CEO 인사말</a></li>
+                        <li><a href="#">CI</a></li>
+                        <li><a href="#">회사정보</a></li>
+                    </ul>
+                    <ul class="lnb-btn sub-depth depth3-0-1">
+                        <li><a href="#">홍보</a></li>
+                        <li><a href="#">SYSTEM 인증</a></li>
+                        <li><a href="#">알기 쉬운 해운업</a></li>
+                    </ul>
+                    <ul class="lnb-btn sub-depth depth3-0-2">
+                        <li><a href="#">채용정보 [육상]</a></li>
+                        <li><a href="#">채용정보 [해상]</a></li>
+                    </ul>
+                    <ul class="lnb-btn sub-depth depth3-1-0">
+                        <li><a href="container_1_1.html">소개</a></li>
+                        <li><a href="#">서비스 네트워크</a></li>
+                        <li><a href="#">터미널 정보</a></li>
+                        <li><a href="#">선대(Vessel Fleet)</a></li>
+                        <li><a href="#">기기정보</a></li>
+                    </ul>
+                    <ul class="lnb-btn sub-depth depth3-1-1">
+                        <li><a href="#">내륙운송</a></li>
+                        <li><a href="#">위험화물</a></li>
+                        <li><a href="#">규격초과화물</a></li>
+                        <li><a href="#">냉동화물</a></li>
+                        <li><a href="#">중량화물</a></li>
+                    </ul>
+                    <ul class="lnb-btn sub-depth depth3-1-2">
+                        <li><a href="#">제규 및 안전규칙</a></li>
+                        <li><a href="#">화물 클레임 처리 절차</a></li>
+                        <li><a href="#">Verified Gross Mass</a></li>
+                        <li><a href="#">고객의 소리</a></li>
+                    </ul>
+                    <ul class="lnb-btn sub-depth depth3-2-0">
+                        <li><a href="#">탱크선</a></li>
+                        <li><a href="#">부정기선</a></li>
+                        <li><a href="#">벌크정기선</a></li>
+                    </ul>
+                    <ul class="lnb-btn sub-depth depth3-3-1">
+                        <li><a href="#">공시정보</a></li>
+                        <li><a href="#">재무정보</a></li>
+                        <li><a href="#">IR 자료실</a></li>
+                        <li><a href="#">주가정보</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-intro">
+            <h3 class="wrap" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="600">소개 INTRODUCE</h3>
+            <div class="intro-sec1 clearfix" data-aos="fade-left" data-aos-duration="1600" data-aos-delay="600">
+                <div class="wrap">
+                    <div class="intro-img intro-img-1"><span class="sound-only">컨테이너 예시 이미지</span></div>
+                    <div class="intro-txt intro-txt-l">
+                        <h4>Container</h4>
+                        <p class="max750">HMM은 1976년 창립이래 세계 일류의 종합 물류 기업이 되기 위해 끊임없는 노력을 기울여 왔습니다. 그 결과 미주/구주/아주 및 대서양 항로에 대해 다양한 서비스를 제공하며, 세계 유수의 선사들과 어깨를 나란히 하는 글로벌 선사로 성장했습니다.  HMM은 남미/호주/러시아 등 신흥시장 공략, 냉동 컨테이너 내륙 운송, 미주 지역 내 고객 서비스 센터(RCSC) 설립 등을 통해 서비스 영역을 확대해 왔습니다.</p>
+                        <p class="max750">또한 모바일 어플리케이션을 통해 고객이 손 쉽게 스케줄 조회, 선적 예약, 화물위치조회 및 선하증권 업무 등을 할 수 있는 시스템을 제공하고 있습니다.</p>
+                        <p class="max750">이외에도 HMM은 21세기 초일류선사로 거듭나기 위해 선복 확대를 비롯하여 보다 양질의 서비스를 제공하고 노력하고 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-sec2 clearfix" >
+                <div class="wrap">
+                    <div class="intro-img intro-img-2" data-aos="fade-right" data-aos-duration="1600"><span class="sound-only">컨테이너 선박 이미지</span></div>
+                    <div class="intro-txt intro-txt-r" data-aos="fade-right" data-aos-duration="1600">
+                        <p class="max750">HMM은 Hapag-Lloyd, ONE, Yangming으로 구성된 THE Alliance에 정회원으로 가입해 2020년 4월부터 본격적으로 공동 운항 서비스를 개시함으로써 경쟁력 있는 네트워크 구축, 선복량 확대를 통하여 서비스를 강화해 나가고 있습니다.</p>
+                        <p class="max750">초대형 선박에 대한 투자 및 냉동 화물 등 특수 컨테이너 서비스 영업강화, 화주 Relationship 강화, 신규시장개척 등을 통해 서비스 강화를 지속적으로 추진하고 있으며, 신규항로개설, 선복증대, IT 부문 등에 대한 투자도 강화하고 있습니다.  HMM은 고객의 다양한 수요에 적극적으로 부응하는 한편, 고객지향적이고 기업윤리에 입각한 경영진들과 함께 고객만족을 위해 최선을 다하고 있습니다. HMM은 고객의 수익창출을 위해 지속적인 개혁과 서비스 확대를 해나가고 있으며, 이러한 일련의 노력을 통해 가장 경쟁력 있는 종합물류 기업으로 거듭날 것입니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-sec3-img" data-aos="fade-down" data-aos-duration="1600" data-aos-delay="600">
+                <img src="images/container_1_1_hexabg.png" alt="hmm,beyend the limit 6각형모형 hmm 컨테이너 이미지">
+            </div>
+        </div>
+        <div class="container-service">
+            <h4>Container Service</h4>
+            <div class="h4-desc max1000">HMM은 세계 최대 24,000TEU급 컨테이너선 12척을 유럽 항로에 투입해 한 차원 높은 해운 물류 서비스를 제공하고 있습니다. HMM의 초대형선은 규모뿐 아니라 기술에서도 세계 최고를 자랑하며, IT 기술이 집약된 스마트십으로 건조되어 23명의 승무원만으로 운항이 가능합니다. 또한 육상의 선박종합상황실(Fleet Control Center)을 통해 실시간으로 추적, 관리되어 더욱 안전하고 안정적인 서비스를 제공합니다.</div>
+            <div class="container-service-wrap">
+                <ol class="cs-list clearfix">
+                    <li>
+                        <div class="cs-icon cs-icon1" data-aos="fade-down" data-aos-duration="1200"></div>
+                        <div class="cs-txt" data-aos="fade-down" data-aos-duration="1200">DRY CONTAINER</div>
+                    </li>
+                    <li>
+                        <div class="cs-icon cs-icon2" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="150"></div>
+                        <div class="cs-txt" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="150">REFIGERATED CONTAINER</div>
+                    </li>
+                    <li>
+                        <div class="cs-icon cs-icon3" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="300"></div>
+                        <div class="cs-txt" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="300">SPECIALIZED CONTAINER</div>
+                    </li>
+                    <li>
+                        <div class="cs-icon cs-icon4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="450"></div>
+                        <div class="cs-txt" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="450">CONTAINER MANAGEMENT</div>
+                    </li>
+                    <li>
+                        <div class="cs-icon cs-icon5" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="600"></div>
+                        <div class="cs-txt" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="600">INTERMODAL SERVICE</div>
+                    </li>
+                    <li>
+                        <div class="cs-icon cs-icon6" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="750"></div>
+                        <div class="cs-txt" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="750">DANGEROUS CARGO</div>
+                    </li>
+                    <li>
+                        <div class="cs-icon cs-icon7" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="900"></div>
+                        <div class="cs-txt" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="900">OUT-OF-GAUGE</div>
+                    </li>
+                    <li>
+                        <div class="cs-icon cs-icon8" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="1050"></div>
+                        <div class="cs-txt" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="1050">REFRIGERATED CARGO SERVICE</div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="membership-service">
+            <div class="wrap">
+                <h4>Membership Service</h4>
+                <div class="h4-desc">About HMM, HMM Service, Support Center Anyone can view all the information without registration.</div>
+                <table data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+                    <thead>
+                        <tr class="table-line">
+                            <th colspan="2">e-Services & Features</th>
+                            <th>No Registration</th>
+                            <th>Standard Registration </th>
+                            <th>Advanced Registration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="5">Schedule</th>
+                            <th>Sailing Schedule</th>
+                            <td><span class="table-chk"></span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Vessel Schedule</th>
+                            <td><span class="table-chk"></span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Port Schvedule</th>
+                            <td><span class="table-chk"></span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Longterm Schedule</th>
+                            <td><span class="table-chk"></span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Your Own Schedule Report</th>
+                            <td><span class="table-chk"></span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Track&Trace (by B/L, Container, Booking & P/O No)</th>
+                            <td><span class="table-chk"></span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">HMM Tariffs</th>
+                            <td><span class="table-chk"></span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Rate Request</th>
+                            <td></td>
+                            <td></td>
+                            <td><span class="table-chk"></span></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">e-Booking</th>
+                            <td></td>
+                            <td></td>
+                            <td><span class="table-chk"></span></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">B/L View (by B/L No)</th>
+                            <td></td>
+                            <td></td>
+                            <td><span class="table-chk"></span></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Arrival Notice</th>
+                            <td></td>
+                            <td></td>
+                            <td><span class="table-chk"></span></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="3">Internet B/L</th>
+                            <th>S/I input</th>
+                            <td></td>
+                            <td></td>
+                            <td><span class="table-chk"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Remote B/L Print</th>
+                            <td></td>
+                            <td></td>
+                            <td><span class="table-chk"></span></td>
+                        </tr>
+                        <tr>
+                            <th>S/I input & Remote B/L Print</th>
+                            <td></td>
+                            <td></td>
+                            <td><span class="table-chk"></span></td>
+                        </tr>
+                        <tr class="last-table-line">
+                            <th colspan="2">Customer Report</th>
+                            <td></td>
+                            <td></td>
+                            <td><span class="table-chk"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="m-table" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">
+                    <dl>
+                        <dt>No Registration Service</dt>
+                        <dd>&nbsp;Sailing Schedule</dd>
+                        <dd>&nbsp;Vessel Schedule</dd>
+                        <dd>&nbsp;Port Schvedule</dd>
+                        <dd>&nbsp;Longterm Schedule</dd>
+                        <dd>&nbsp;Your Own Schedule Report</dd>
+                        <dd>&nbsp;Track&Trace (by B/L, Container, Booking & P/O No)</dd>
+                        <dd>&nbsp;HMM Tariffs</dd>
+                    </dl>
+                    <dl>
+                        <dt>Advanced Registration Service</dt>
+                        <dd>&nbsp;Rate Request</dd>
+                        <dd>&nbsp;e-Booking</dd>
+                        <dd>&nbsp;B/L View (by B/L No)</dd>
+                        <dd>&nbsp;Arrival Notice</dd>
+                        <dd>&nbsp;S/I input</dd>
+                        <dd>&nbsp;Remote B/L Print</dd>
+                        <dd>&nbsp;S/I input & Remote B/L Print</dd>
+                        <dd>&nbsp;Customer Repor</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="container-last-banner">
+                <div class="cl-banner-txt">
+                    <span>THE GREAT VOYAGES OF</span>
+                    <span><strong> WORLD'S LARGEST CONTAINER SHIPS</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="ft-wrap wrap">
+            <div class="ft-top">
+                <ul class="ft-sns">
+                    <li class="ft-sns-icon"><a href="#"><i class="fa-brands fa-youtube"></i><span class="sound-only">유튜브</span></a></li>
+                    <li class="ft-sns-icon"><a href="#"><i class="fa-brands fa-instagram"></i><span class="sound-only">인스타그램</span></a></li>
+                    <li class="ft-sns-icon"><a href="#"><i class="fa-brands fa-facebook-f"></i><span class="sound-only">페이스북</span></a></li>
+                    <li class="ft-sns-icon"><a href="#"><i class="fa-brands fa-linkedin-in"></i><span class="sound-only">링크드인</span></a></li>
+                    <li class="ft-sns-icon"><a href="#"><img src="images/naver_blog_icon.png" alt="네이버 블로그 아이콘"><span class="sound-only">네이버 블로그</span></a></li>
+                </ul>
+                <ul class="ft-menu">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+                <dl class="ft-info">
+                    <dt>사업자번호</dt>
+                    <dd>123-45-6789</dd>
+                    <dt>대표자명</dt>
+                    <dd>배재훈</dd><br>
+                    <dt>주소</dt>
+                    <dd>서울특별시 종로구 율곡로 194 (03127)</dd><br>
+                    <dt class="sound-only">전화번호</dt>
+                    <dd class="ft-tel"><a href="tel:02-3706-5114">02-3706-5114</a></dd>
+                </dl>
+                <form action="" name="moveto" class="moveto" method="">
+                    <fieldset>
+                        <legend class="sound-only">move to</legend>
+                        <label for="ft-moveto">Move to</label>
+                        <select name="ft-moveto" id="ft-moveto">
+                            <option>Affiliate site</option>
+                            <option value="#">Washington United Terminals(WUT)</option>
+                            <option value="#">의왕ICD</option>
+                            <option value="#">Hyundai Pusan New-Port Terminal (HPNT)</option>
+                        </select>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="ft-bt">
+                <div class="copyrigth">COPYRIGHT&copy; 2012 HMM All rights reserved</div>
+                <p class="max500">이 사이트는 취업을 목적으로 포트폴리오 용으로 제작되었으며 회사와는 아무 상관이 없습니다. 사이트 제작에 사용된 이미지나 로고는 각 사이트에 저작권이 있습니다.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="sitemap-close-btn"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal"><iframe src="sitemap.html" frameborder="0"></iframe></div>
+    <div class="gototop bl-bg"><a href="#" class="fa-solid fa-arrow-up wh"></a></div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+@charset 'utf-8';
+/* 컨테이너 소개 */
+
+
+@media screen and (max-width: 767px) {
+    /* 소개 */
+    .container-1-1 h3 {
+        padding-top: 30px;
+        font-size: 2.1em;
+    }
+    .container-1-1 h4 {
+        font-size: 1.8em;
+    }
+    .container-1-1 .h4-desc {
+        padding: 20px 0;
+    }
+    .intro-sec2 {
+        background-size: 120%;
+    }
+    .container-last-banner {
+        height: 300px;
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    table {display: none;}
+    .m-table {margin: 0 1%;}
+    .m-table dt {font-size: 17px;}
+    .m-table dd {font-size: 15px;}
+    
+    /* 서비스 네트워크 */
+    /* 터미널 정보 */
+    /* 선대 */
+    /* 기기정보 */
+}
+
+@media screen and (min-width: 768px) {
+    /* 소개 */
+    .intro-sec1 {
+        padding: 30px 0;
+    }
+    .container-service, .membership-service {
+        padding-top: 120px;
+    }
+    .cs-list {
+        position: relative;
+        left: 50%;
+        margin-left: -400px;
+    }
+    .cs-list li {
+        float: left;
+    }
+    .cs-list li:nth-of-type(5) {clear: left;}
+    /* 서비스 네트워크 */
+    /* 터미널 정보 */
+    /* 선대 */
+    /* 기기정보 */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    /* 소개 */
+    table {display: none;}
+
+    /* 서비스 네트워크 */
+    /* 터미널 정보 */
+    /* 선대 */
+    /* 기기정보 */
+}
+
+
+@media screen and (min-width: 1280px) {
+    /* 소개 */
+    .container-1-1 h3 {
+        text-align: left;
+    }
+    .intro-sec1 h4 {
+        text-align: left;
+    }
+    .intro-txt-l, .intro-img-2 {
+        float: right;
+    }
+    .intro-img-1, .intro-txt-r {
+        float: left;
+    }
+    .intro-img {
+        padding: 0;
+    }
+    .intro-sec1 {
+        padding: 70px 0;
+    }
+    .intro-sec2 {
+        padding-top: 80px;
+    }
+    .intro-sec3-img {
+        position: relative;
+        top: -50px;
+    }
+    .intro-sec3-img img{
+        position: static;
+        width: 100%;
+    }
+    .m-table {display: none;}
+    /* 서비스 네트워크 */
+    /* 터미널 정보 */
+    /* 선대 */
+    /* 기기정보 */
+}
+@media screen and (min-width: 1600px) {
+    .intro-sec2 {
+        padding-top: 130px;
+    }
+    
+    .cs-list li {
+        float: inherit;
+    }
+    .cs-list {
+        left: 0;
+        margin: 0;
+    }
+}
+    

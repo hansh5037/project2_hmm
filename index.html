@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMM</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon (2).ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/common_res.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main_res.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/aos.js"></script>
+</head>
+<body>
+    <div id="skip">
+        <a href="#main-container">본문 바로가기</a>
+        <a href="#hmm-gnb">주메뉴 바로가기</a>
+        <a href="#hmm-lnb">서브메뉴 바로가기</a>
+    </div>
+    <header id="header">
+        <div class="wrap header-wrap clearfix">
+            <h1 class="main-logo"><a href="index.html"><span class="sound-only">hmm로고</span></a></h1>
+            <div class="m-open-btn wh"><i class="fa-solid fa-bars-staggered"></i><span class="sound-only">주메뉴 열기</span></div>
+            <nav class="global-navigation">
+                <h2 class="sound-only">주메뉴</h2>
+                <ol id="hmm-gnb" class="clearfix">
+                    <li class="depth1">
+                        <a href="#">회사소개</a>
+                        <ol class="depth2">
+                            <li><a href="#">ABOUT US</a></li>
+                            <li><a href="#">PR</a></li>
+                            <li><a href="#">채용정보</a></li>
+                        </ol>
+                    </li>
+                    <li class="depth1">
+                        <a href="container_1_1.html">컨테이너</a>
+                        <ol class="depth2">
+                            <li class="chk"><a href="container_1_1.html">컨테이너 소개</a></li>
+                            <li><a href="#">운송 및 화물 종류</a></li>
+                            <li><a href="#">관련 규정</a></li>
+                        </ol>
+                    </li>
+                    <li class="depth1">
+                        <a href="#">벌크</a>
+                        <ol class="depth2">
+                            <li><a href="#">벌크선의 종류</a></li>
+                            <li><a href="#">벌크 e-business</a></li>
+                        </ol>
+                    </li>
+                    <li class="depth1">
+                        <a href="#">투자정보</a>
+                        <ol class="depth2">
+                            <li><a href="#">IR HOME</a></li>
+                            <li><a href="#">투자 자료실</a></li>
+                            <li><a href="#">IR 미팅 신청</a></li>
+                        </ol>
+                    </li>
+                    <li class="depth1">
+                        <a href="#">사회공헌</a>
+                        <ol class="depth2">
+                            <li><a href="#">윤리경영</a></li>
+                            <li><a href="#">지속가능경영</a></li>
+                        </ol>
+                    </li>
+                    <li class="depth1">
+                        <a href="#">고객지원</a>
+                        <ol class="depth2">
+                            <li><a href="#">Office 목록</a></li>
+                            <li><a href="#">eBiz</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Q&A</a></li>
+                            <li><a href="#">안전보건 의견제안</a></li>
+                        </ol>
+                    </li>
+                    <li class="depth1">
+                        <a href="#">LOCALSITE</a>
+                        <ol class="depth2">
+                            <li><a href="#">EUROPE MIDDLE EAST</a></li>
+                            <li><a href="#">ASIA</a></li>
+                            <li><a href="#">AMEFICAS</a></li>
+                        </ol>
+                    </li>
+                </ol>
+                <button class="sitemap-open-btn fa-solid fa-bars-staggered"><span class="sound-only">사이트맵</span></button>
+                <div class="mobile">
+                    <div class="m-gnb-hd">
+                        <ul class="m-language-btn clearfix gr-bg">
+                            <li><a href="#">KR</a></li>
+                            <li><a href="#">EN</a></li>
+                        </ul>
+                        <div class="m-close-btn"><i class="fa-solid fa-xmark"></i><span class="sound-only">주메뉴 닫기</span></div>
+                    </div>
+                    <ol id="m-gnb">
+                        <li class="depth1">
+                            <a href="#">회사소개</a>
+                            <ol class="depth2">
+                                <li><a href="#">ABOUT US</a></li>
+                                <li><a href="#">PR</a></li>
+                                <li><a href="#">채용정보</a></li>
+                            </ol>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">컨테이너</a>
+                            <ol class="depth2">
+                                <li><a href="container_1_1.html">컨테이너 소개</a></li>
+                                <li><a href="#">운송 및 화물 종류</a></li>
+                                <li><a href="#">관련 규정</a></li>
+                            </ol>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">벌크</a>
+                            <ol class="depth2">
+                                <li><a href="#">벌크선의 종류</a></li>
+                                <li><a href="#">벌크 e-business</a></li>
+                            </ol>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">투자정보</a>
+                            <ol class="depth2">
+                                <li><a href="#">IR HOME</a></li>
+                                <li><a href="#">투자 자료실</a></li>
+                                <li><a href="#">IR 미팅 신청</a></li>
+                            </ol>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">사회공헌</a>
+                            <ol class="depth2">
+                                <li><a href="#">윤리경영</a></li>
+                                <li><a href="#">지속가능경영</a></li>
+                            </ol>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">고객지원</a>
+                            <ol class="depth2">
+                                <li><a href="#">Office 목록</a></li>
+                                <li><a href="#">eBiz</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Q&A</a></li>
+                                <li><a href="#">안전보건 의견제안</a></li>
+                            </ol>
+                        </li>
+                        <li class="depth1">
+                            <a href="#">LOCALSITE</a>
+                            <ol class="depth2">
+                                <li><a href="#">EUROPE MIDDLE EAST</a></li>
+                                <li><a href="#">ASIA</a></li>
+                                <li><a href="#">AMEFICAS</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </nav>
+            <nav class="utill-menu-navigation clearfix">
+                <h2 class="sound-only">유틸메뉴</h2>
+                <ol class="utill-menu">
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">KOR</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <div id="main-container">
+        <div class="main-visual-container">
+            <h3 class="sound-only">메인 비주얼</h3>
+            <ul class="main-visual">
+                <li class="main-visual1">
+                    <div class="wrap">
+                        <div class="main-visual-txt">
+                            <strong>BEYOND BORDERS<br>TOWARDS TOMORROW</strong>
+                            <p>최고의 수송 서비스를 제공하는  세계적인 종합 해운 물류기업 HMM 입니다.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-visual2">
+                    <div class="wrap">
+                        <div class="main-visual-txt">
+                            <strong>CONNECT VALUES<br>CONNECT THE WORLD</strong>
+                            <p>초대형 컨테이너선 20척 누적 운송량 "300만TEU" 달성</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-visual3">
+                    <div class="wrap">
+                        <div class="main-visual-txt">
+                            <strong>BIG CARRIER<br>TOP EFFICIENCY!</strong>
+                            <p>HMM은 초대형 컨테이너선으로 최고의 효율성과 경제성을 추구합니다</p>
+                        </div>
+                        <div class="main-visual3-img"><img src="images/main_visual3_img.png" alt="24,000TEU급 선박 사이즈 길이 비교 사진"></div>
+                    </div>
+                </li>
+            </ul>
+            <div class="mv-controls clearfix">
+                <div class="pagination">
+                    <button class="mv-btn"><span class="dsk-blind">01</span></button>
+                    <button class="mv-btn"><span class="dsk-blind">02</span></button>
+                    <button class="mv-btn"><span class="dsk-blind">03</span></button>
+                </div>
+                <button class="mv-btn-toggle fa-solid fa-pause wh"><span class="sound-only">재생/중지</span></button>
+            </div>
+        </div>
+        <div class="main-tab-container">
+            <h3 class="sound-only">운항 스케줄 조회 탭메뉴</h3>
+            <div class="main-tab-btn clearfix">
+                <div class="wrap">
+                    <button>Schedules</button>
+                    <button>BK/BL</button>
+                    <button>VGM</button>
+                    <button>My Shipment</button>
+                </div>
+            </div>
+            <div class="main-tab-contents">
+                <div class="wrap">
+                    <div class="mt-section mt-section1">
+                        <h4 class="sound-only">Schedules</h4>
+                        <form name="main-schedules-form" id="main-schedules-form" method="" action="">
+                            <fieldset>
+                                <legend class="sound-only">schedules-lookup</legend>
+                                <ol class="schedules-form clearfix">
+                                    <li>
+                                        <label for="sch-from">From</label>
+                                        <div><input type="text" name="sch-from" id="sch-from" placeholder="도시명을 입력하세요"></div>
+                                    </li>
+                                    <li>
+                                        <label for="sch-to">To</label>
+                                        <div><input type="text" name="sch-to" id="sch-to" placeholder="도시명을 입력하세요"></div>
+                                    </li>
+                                    <li>
+                                        <label for="sch-period-date">Period</label>
+                                        <div>
+                                            <input type="date" name="sch-period-date" id="sch-period-date">
+                                            <select name="sch-period" id="sch-period">
+                                                <option>1 weeks</option>
+                                                <option>2 weeks</option>
+                                                <option>3 weeks</option>
+                                                <option>4 weeks</option>
+                                                <option>5 weeks</option>
+                                                <option>6 weeks</option>
+                                                <option>7 weeks</option>
+                                                <option>8 weeks</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label for="">View Type</label>
+                                        <div>
+                                            <input type="radio" name="sch-vt" id="vt-list" class="style-none">
+                                            <label for="vt-list">List</label>
+                                            <input type="radio" name="sch-vt" id="vt-calendar" class="style-none">
+                                            <label for="vt-calendar">Calendar</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label for="sch-so">Sorting Option</label>
+                                        <div>
+                                            <select name="sch-so" id="sch-so">
+                                                <option>Departure dare</option>
+                                                <option>T/Time</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </fieldset>
+                            <div class="sch-search-btn">
+                                <input type="submit" value="Search" name="" id="" class="bl-btn">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mt-section mt-section2 clearfix">
+                        <h4 class="sound-only">BK/BL</h4>
+                        <form name="main-bkbl-form" id="main-bkbl-form" method="" action="">
+                            <fieldset>
+                                <legend class="sound-only">LOGIN</legend>
+                                <ol>
+                                    <li>
+                                        <label for="login-id">ID</label>
+                                        <input type="text" name="login-id" id="login-id" placeholder="아이디를 입력하세요.">
+                                    </li>
+                                    <li>
+                                        <label for="login-pw">Password</label>
+                                        <input type="password" name="login-pw" id="login-pw" placeholder="비밀번호를 입력하세요.">
+                                    </li>
+                                    <li class="sgin-in-btn">
+                                        <input type="submit" value="Sign in" class="bl-btn">
+                                    </li> 
+                                </ol>
+                            </fieldset> 
+                        </form>
+                        <div>
+                            <a href="#" class="btn-join bl-line-btn">New Registration</a><br>
+                            <a href="#" class="btn-id-find bl-line-btn">Forgot ID</a><br>
+                            <a href="#" class="btn-pw-find bl-line-btn">Forgot Password</a>
+                        </div>
+                    </div>
+                    <div class="mt-section mt-section3">
+                        <h4 class="sound-only">VGM</h4>
+                        <form name="main-bkbl-form" id="main-bkbl-form" method="" action="">
+                            <fieldset>
+                                <legend class="sound-only">LOGIN</legend>
+                                <ol>
+                                    <li>
+                                        <label for="login-id">ID</label>
+                                        <input type="text" name="login-id" id="login-id" placeholder="아이디를 입력하세요.">
+                                    </li>
+                                    <li>
+                                        <label for="login-pw">Password</label>
+                                        <input type="password" name="login-pw" id="login-pw" placeholder="비밀번호를 입력하세요.">
+                                    </li>
+                                    <li class="sgin-in-btn">
+                                        <input type="submit" value="Sign in" class="bl-btn">
+                                    </li> 
+                                </ol>
+                            </fieldset> 
+                        </form>
+                        <div>
+                            <a href="#" class="btn-join bl-line-btn">New Registration</a><br>
+                            <a href="#" class="btn-id-find bl-line-btn">Forgot ID</a><br>
+                            <a href="#" class="btn-pw-find bl-line-btn">Forgot Password</a>
+                        </div>
+                    </div>
+                    <div class="mt-section mt-section4">
+                        <h4 class="sound-only">My Shipment</h4>
+                        <form name="main-bkbl-form" id="main-bkbl-form" method="" action="">
+                            <fieldset>
+                                <legend class="sound-only">LOGIN</legend>
+                                <ol>
+                                    <li>
+                                        <label for="login-id">ID</label>
+                                        <input type="text" name="login-id" id="login-id" placeholder="아이디를 입력하세요.">
+                                    </li>
+                                    <li>
+                                        <label for="login-pw">Password</label>
+                                        <input type="password" name="login-pw" id="login-pw" placeholder="비밀번호를 입력하세요.">
+                                    </li>
+                                    <li class="sgin-in-btn">
+                                        <input type="submit" value="Sign in" class="bl-btn">
+                                    </li> 
+                                </ol>
+                            </fieldset> 
+                        </form>
+                        <div>
+                            <a href="#" class="btn-join bl-line-btn">New Registration</a><br>
+                            <a href="#" class="btn-id-find bl-line-btn">Forgot ID</a><br>
+                            <a href="#" class="btn-pw-find bl-line-btn">Forgot Password</a>
+                        </div>
+                    </div>  
+                </div>
+            </div>                      
+        </div>
+        <div class="main-biz-container">
+            <h3 class="bl" data-aos="fade-right" data-aos-duration="1200">SMART SHIPPING</h3>
+            <div class="main-biz gr-bg">
+                <div class="wrap clearfix">
+                    <ul class="main-biz-ul clearfix on">
+                        <li class="biz1">
+                            <a href="#">
+                                <h4 class="biz-title">Container</h4>
+                                <div class="biz-dl-wrap">
+                                    <dl class="biz-dl">
+                                        <dt class="sound-only">사업 개요</dt>
+                                        <dd class="biz-txt biz-txt1">다양한 제품특성에 맞는 최적화된 컨테이너를 통해 전세계 어디든 고품질의 서비스로 운송하는 특수 컨테이너입니다.</dd>
+                                        <dt class="sound-only">컨테이너 종류</dt>
+                                        <dd class="biz-txt">
+                                            <ul>
+                                                <li>REEFER CONTAINER<br> - 내부온도 -40℃ ~ +30℃</li>
+                                                <li>ULTRA FREEZER CONTAINER<br>- -60℃ ~ -10℃</li>
+                                                <li>CA CONTAINER<br>- (내부 CO<sub>2</sub>농도조절가능)</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="biz2">
+                            <a href="#">
+                                <h4 class="biz-title">Bulk</h4>
+                                <div class="biz-dl-wrap">
+                                    <dl class="biz-dl">
+                                        <dt class="sound-only">사업 개요</dt>
+                                        <dd class="biz-txt biz-txt1">40년 이상 변함없는 라이너 서비스를 통해 대한민국 수출물류 운송에 기여 하였습니다. 또한 회사 태동의 주역으로서 최고의 영업경쟁력으로 글로벌 최상의 서비스를 제공합니다.</dd>
+                                        <dt class="sound-only">벌크의 종류</dt>
+                                        <dd class="biz-txt">
+                                            <ul>
+                                                <li>탱커선(TANKER)<br>- 원유선, 제품선</li>
+                                                <li>부정기선(TRAMPER)<br>- Cape, Panamax, Supramax/Handy</li>
+                                                <li>벌크정기선</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="biz3">
+                            <a href="#">
+                                <h4 class="biz-title">Terminals</h4>
+                                <div class="biz-dl-wrap">
+                                    <dl class="biz-dl">
+                                        <div class="biz-dl">
+                                            <dt class="sound-only">사업 개요</dt>
+                                            <dd class="biz-txt">HMM은 부산과 미국 터코마, 대만 카오슝, 스페인 알헤시라스에서 자영터미널을 운영 중이며, 미국 캘리포니아 롱비치, 네덜란드 로테르담 등에서는 지분을 인수해 주주로서 터미널을 운영하고 있습니다. 최고의 환경 및 안전 관리, 최첨단 시설 확보, 뛰어난 운영 효율, 최적의 고객서비스 제공 등을 통해 글로벌 터미널 운영사로서 명성을 쌓고 있습니다. 또한, 전세계 각지에서의 추가적인 터미널 지분 인수 확보를 통하여 향후 글로벌 터미널 운영사로 도약하기 위한 노력을 지속하고 있습니다.</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mb-txt max620" data-aos="fade-right" data-aos-duration="1200">
+                        <strong>THE VALUE CREATOR</strong>
+                        <div class="mb-desc">
+                            HMM은 첨단 해운물류 시스템과 오랜 노하우, 전문성을 갖추고 고객 화물의 가치를 극대화합니다. 주력 사업인 컨테이너선과 벌크선, 육상 운송은 물론 세계 주요 항만의 터미널 운영까지, HMM의 모든 사업은 오직 고객을 향합니다. 미주와 유럽, 아시아 등 세계의 주요 항로를 누비는 HMM의 사업 역량과 다양한 서비스를 소개합니다.
+                        </div>
+                        <button class="bl-line-btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <ul class="main-biz-icon icon wrap clearfix">
+                <li>
+                    <div class="icon1" data-aos="fade-down" data-aos-duration="1200"></div>
+                    <dl data-aos="fade-down" data-aos-duration="1200">
+                        <dt>Investor Relations</dt>
+                        <dd>전자공고</dd>
+                    </dl>
+                </li>
+                <li>
+                    <div class="icon2" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="150"></div>
+                    <dl data-aos="fade-down" data-aos-duration="1200" data-aos-delay="150">
+                        <dt>Office</dt>
+                        <dd>Korea office</dd>
+                    </dl>
+                </li>
+                <li>
+                    <div class="icon3" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="300"></div>
+                    <dl data-aos="fade-down" data-aos-duration="1200" data-aos-delay="300">
+                        <dt>HMM</dt>
+                        <dd>Tariff</dd>
+                    </dl>
+                </li>
+                <li>
+                    <div class="icon4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="450"></div>
+                    <dl data-aos="fade-down" data-aos-duration="1200" data-aos-delay="450">
+                        <dt>Surcharge</dt>
+                        <dd>Inquiry</dd>
+                    </dl>
+                </li>
+                <li>
+                    <div class="icon5" class="icon4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="600"></div>
+                    <dl class="icon4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="600">
+                        <dt>Reefer container</dt>
+                        <dd>Monitoring</dd>
+                    </dl>
+                </li>
+                <li>
+                    <div class="icon6" class="icon4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="700"></div>
+                    <dl class="icon4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="700">
+                        <dt>Carbon</dt>
+                        <dd>Calculator</dd>
+                    </dl>
+                </li>
+                <li>
+                    <div class="icon7" class="icon4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="850"></div>
+                    <dl class="icon4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="850">
+                        <dt>Ethics</dt>
+                        <dd>Management</dd>
+                    </dl>
+                </li>
+                <li>
+                    <div class="icon8" class="icon4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="1000"></div>
+                    <dl class="icon4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="1000">
+                        <dt>Badasori</dt>
+                        <dd>Webzine</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div class="main-middle-banner gr">
+            <div>
+                <strong>국내 1위의 한국 대표 해운사 HMM</strong>
+                <p class="max620">
+                    2020년부터 북유럽, 지중해 노선 등에 초대형선 투입하여 향후 대서양, 아프리카까지 항로 확대 예정입니다. 세계 유수의 선사들과 어깨를 나란히 하는 글로벌 선사 HMM!
+                </p>
+            </div>
+        </div>
+        <div class="media-container">
+            <div class="main-video-container">
+                <div class="wrap1200">
+                    <h3>Contact the world</h3>
+                    <div>
+                        미주·구주·아주·대서양 항로에서 다양한 서비스를 제공하며, 세계 유수의 선사들과 어깨 를 나란히 하는 글로벌 선사로 성장했습니다. 또한 남미·호주·러시아 등 신흥시장을 공략하는 한 편, 냉동 컨테이너의 내륙 운송 서비스를 제공하고 미주 지역 내 고객 서비스 센터(RCSC)를 설립하는 등 서비스 영역을 확대해왔습니다. 또한 고객이 언제 어디서든 손쉽게 스케줄 조회, 선적 예약, 화물 위치 조회 및 선하증권 업무 등 을 처리할 수 있도록 모바일 어플리케이션을 제공하고 있습니다.
+                    </div>
+                </div>
+                <div class="video-bg gr-bg">
+                    <div class="wrap1200">
+                        <div class="main-video bg-gr">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hVEbcErZLIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <ul class="main-video-icon icon clearfix">
+                    <li>
+                        <div class="icon9" data-aos="fade-down" data-aos-duration="1200"></div>
+                        <dl data-aos="fade-down" data-aos-duration="1200">
+                            <dt>총 선북량</dt>
+                            <dd><strong>814,776</strong>TEU</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <div class="icon10" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="150"></div>
+                        <dl data-aos="fade-down" data-aos-duration="1200" data-aos-delay="150">
+                            <dt>서비스 항로</dt>
+                            <dd><strong>60</strong>개 이상</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <div class="icon11" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="300"></div>
+                        <dl data-aos="fade-down" data-aos-duration="1200" data-aos-delay="300">
+                            <dt>전 세계 연결 항구</dt>
+                            <dd><strong>100</strong>개 이상</dd>
+                        </dl>
+                    </li>
+                    <li class="lasticon">
+                        <div class="icon12" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="450"></div>
+                        <dl data-aos="fade-down" data-aos-duration="1200" data-aos-delay="450">
+                            <dt>다양한 선종</dt>
+                            <dd><strong>1,000~24,000</strong></dd>
+                        </dl>
+                    </li>
+                    <li class="lasticon">
+                        <div class="icon13" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="600"></div>
+                        <dl data-aos="fade-down" data-aos-duration="1200" data-aos-delay="600">
+                            <dt>24.000TEU급 초대형선</dt>
+                            <dd><strong>12</strong>척</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-latestnews-container">
+                <h3 class="bl">LATEST NEWS</h3>
+                <div class="h3-desc max620">지속적 혁신과 고객맞춤형 서비스를 기반으로 해운 물류업계의 리더로서 건강한 시장 생태계 구축을 도모합니다. 더불어 다양한 이해관계자들과 끊임없이 소통함으로써 경제, 사회 및 환경 전 분야에서 지속가능한 성장을 추구합니다.</div>
+                <div class="latestnews-cnt">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination">
+                        <div class="pagination-wrap">
+                            <div class="page-num"></div>
+                            <div class="pagination-track">
+                                <div class="swiper-pagination-progressbar-fill"></div>
+                            </div>
+                            <div class="page-total"></div>
+                        </div>
+                    </div>
+                    <div class="news-box swiper" data-aos="fade-right" data-aos-duration="2000">
+                        <ol class="latestnews clearfix swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="latest-img img1"><span class="sound-only">뉴스 이미지 1</span></div>
+                                    <div class="latest-txt">
+                                        <strong>HMM, 대졸 신입사원 공채</strong>
+                                        <div class="latest-cnt">서울·부산에서 영업/영업관리, 관리지원, IT 등 모집 28일 서류마감 후 AI역량검사, 면접전형 등 진행 대한민국 대표 국적선사 HMM(대표이사 배재훈)이 2022년 대졸 신입사원을 채용한다고 16일 밝혔다.</div>
+                                        <div class="latest-date">03.20</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="latest-img img2"><span class="sound-only">뉴스 이미지 2</span></div>
+                                    <div class="latest-txt">
+                                        <strong>HMM, 11년만에 현금배당 결정</strong>
+                                        <div class="latest-cnt">1주당 600원 현금배당…약 3,000억원 규모 2011년 이후 첫 배당…29일 주총 승인 거쳐 확정 HMM(대표이사 배재훈)이 약 3,000억원 규모의 현금배당을 결정했다. 지난 2011년 이후 11</div>
+                                        <div class="latest-date">03.20</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="latest-img img3"><span class="sound-only">뉴스 이미지 3</span></div>
+                                    <div class="latest-txt">
+                                        <strong>HMM, 산불피해 지역에 성금 5억·컨박스 30대...</strong>
+                                        <div class="latest-cnt">긴급 지원 가능한 30대 우선 마련…. “필요시 적극적으로 추가 지원” “해운업 전문성 살린 공헌 활동 통해 사회적 책임 다할 것”속초-고성 산불피해시에도 컨테이너박스 긴급지원으로 큰 도움 HMM(대표이사...</div>
+                                        <div class="latest-date">03.20</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="latest-img img4"><span class="sound-only">뉴스 이미지 4</span></div>
+                                    <div class="latest-txt">
+                                        <strong>HMM, 초대형선 20척 누적 운송량 300만TEU 달성</strong>
+                                        <div class="latest-cnt">HMM은 세계 최대 컨테이너선 2만4000TEU(1TEU=20피트짜리 컨테이너 1개)급 12척, 1만6,000TEU급 8척 등 초대형선 20척의 누적 운송량이 총 300만TEU를 넘어섰다고 22일 밝혔다. 세계 최대 컨테이너선 2만4000TEU급 12척 중 7호선인</div>
+                                        <div class="latest-date">03.20</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="latest-img img5"><span class="sound-only">뉴스 이미지 5</span></div>
+                                    <div class="latest-txt">
+                                        <strong>HMM, 초대형선 20척 누적 운송량 300만TEU 달성</strong>
+                                        <div class="latest-cnt">HMM은 세계 최대 컨테이너선 2만4000TEU(1TEU=20피트짜리 컨테이너 1개)급 12척, 1만6,000TEU급 8척 등 초대형선 20척의 누적 운송량이 총 300만TEU를 넘어섰다고 22일 밝혔다. 세계 최대 컨테이너선 2만4000TEU급 12척 중 7호선인</div>
+                                        <div class="latest-date">03.20</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="latest-img img6"><span class="sound-only">뉴스 이미지 6</span></div>
+                                    <div class="latest-txt">
+                                        <strong>HMM, 초대형선 20척 누적 운송량 300만TEU 달성</strong>
+                                        <div class="latest-cnt">HMM은 세계 최대 컨테이너선 2만4000TEU(1TEU=20피트짜리 컨테이너 1개)급 12척, 1만6,000TEU급 8척 등 초대형선 20척의 누적 운송량이 총 300만TEU를 넘어섰다고 22일 밝혔다. 세계 최대 컨테이너선 2만4000TEU급 12척 중 7호선인</div>
+                                        <div class="latest-date">03.20</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="latest-img img7"><span class="sound-only">뉴스 이미지 7</span></div>
+                                    <div class="latest-txt">
+                                        <strong>HMM, 초대형선 20척 누적 운송량 300만TEU 달성</strong>
+                                        <div class="latest-cnt">HMM은 세계 최대 컨테이너선 2만4000TEU(1TEU=20피트짜리 컨테이너 1개)급 12척, 1만6,000TEU급 8척 등 초대형선 20척의 누적 운송량이 총 300만TEU를 넘어섰다고 22일 밝혔다. 세계 최대 컨테이너선 2만4000TEU급 12척 중 7호선인</div>
+                                        <div class="latest-date">03.20</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="latest-img img8"><span class="sound-only">뉴스 이미지 8</span></div>
+                                    <div class="latest-txt">
+                                        <strong>HMM, 초대형선 20척 누적 운송량 300만TEU 달성</strong>
+                                        <div class="latest-cnt">HMM은 세계 최대 컨테이너선 2만4000TEU(1TEU=20피트짜리 컨테이너 1개)급 12척, 1만6,000TEU급 8척 등 초대형선 20척의 누적 운송량이 총 300만TEU를 넘어섰다고 22일 밝혔다. 세계 최대 컨테이너선 2만4000TEU급 12척 중 7호선인</div>
+                                        <div class="latest-date">03.20</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="ft-wrap wrap">
+            <div class="ft-top">
+                <ul class="ft-sns">
+                    <li class="ft-sns-icon"><a href="#"><i class="fa-brands fa-youtube"></i><span class="sound-only">유튜브</span></a></li>
+                    <li class="ft-sns-icon"><a href="#"><i class="fa-brands fa-instagram"></i><span class="sound-only">인스타그램</span></a></li>
+                    <li class="ft-sns-icon"><a href="#"><i class="fa-brands fa-facebook-f"></i><span class="sound-only">페이스북</span></a></li>
+                    <li class="ft-sns-icon"><a href="#"><i class="fa-brands fa-linkedin-in"></i><span class="sound-only">링크드인</span></a></li>
+                    <li class="ft-sns-icon"><a href="#"><img src="images/naver_blog_icon.png" alt="네이버 블로그 아이콘"><span class="sound-only">네이버 블로그</span></a></li>
+                </ul>
+                <ul class="ft-menu">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+                <dl class="ft-info">
+                    <dt>사업자번호</dt>
+                    <dd>123-45-6789</dd>
+                    <dt>대표자명</dt>
+                    <dd>배재훈</dd><br>
+                    <dt>주소</dt>
+                    <dd>서울특별시 종로구 율곡로 194 (03127)</dd><br>
+                    <dt class="sound-only">전화번호</dt>
+                    <dd class="ft-tel"><a href="tel:02-3706-5114">02-3706-5114</a></dd>
+                </dl>
+                <form action="" name="moveto" class="moveto" method="">
+                    <fieldset>
+                        <legend class="sound-only">move to</legend>
+                        <label for="ft-moveto">Move to</label>
+                        <select name="ft-moveto" id="ft-moveto">
+                            <option>Affiliate site</option>
+                            <option value="#">Washington United Terminals(WUT)</option>
+                            <option value="#">의왕ICD</option>
+                            <option value="#">Hyundai Pusan New-Port Terminal (HPNT)</option>
+                        </select>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="ft-bt">
+                <div class="copyrigth">COPYRIGHT&copy; 2012 HMM All rights reserved</div>
+                <p class="max500">이 사이트는 취업을 목적으로 포트폴리오 용으로 제작되었으며 회사와는 아무 상관이 없습니다. 사이트 제작에 사용된 이미지나 로고는 각 사이트에 저작권이 있습니다.</p>
+            </div>
+        </div>
+    </footer>
+    <button class="sitemap-close-btn"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal"><iframe src="sitemap.html" frameborder="0"></iframe></div>
+    <div class="gototop bl-bg"><a href="#" class="fa-solid fa-arrow-up wh"></a></div>
+</body>
+</html>

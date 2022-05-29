@@ -1,0 +1,154 @@
+@charset 'utf-8';
+/* 모바일 */
+@media screen and (max-width: 767px) {
+    #header {
+        height: 66px;
+    }
+    h1.main-logo {
+        position: absolute;
+        top: 14px;
+        left: calc(50% - 45px);
+        width: 90px;
+        height: 38px;
+    }
+    .ft-tel a {
+        font-size: 2em;
+    }
+    .moveto select {
+        font-size: 0.85em;
+    }
+    
+}
+
+/* 테블릿 부터 */
+@media screen and (min-width: 768px) {
+    .ft-sns li {
+        padding: 20px;
+    }
+    .ft-sns li img {
+        height: 37px;
+    }
+    .ft-sns li i {
+        font-size: 2.2em;
+    }
+    .ft-menu li {
+        display: inline-block;
+        width: auto;
+        border: 0;
+        padding: 0 20px;
+    }
+}
+
+/* 테블릿 만 */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    h1 {
+        position: absolute;
+        top: 24px;
+        left: calc(50% - 75px);
+    }
+    .m-open-btn, .m-close-btn {
+        top: 32px;
+        right: 32px;
+        font-size: 2em;
+    }
+    .mobile {
+        width: 80vw;
+    }
+}
+
+/* 데스크탑 */
+@media screen and (min-width: 1280px) {
+    .sitemap-open-btn{
+        display: block;
+    }
+    #hmm-gnb {
+        float: left;
+    }
+    .sitemap-open-btn {
+        position: relative;
+        bottom: -66px;
+        float: left;
+        padding-left: 39.279px;
+        font-size: 1.2em;
+        color: #fff;
+    }
+    .main-logo {
+        float: left;
+        margin-top: 24px;
+    }
+    .global-navigation {float: right;}
+    #hmm-gnb {display: block;}
+    .utill-menu-navigation {display: block;}
+    .mobile {display: none;}
+    .m-open-btn, .m-close-btn {
+        display: none;
+    }
+    /* gnb호버 */
+    
+    #header.active {
+        background-color: #fff;
+    }
+    #header.active h1 {
+        background-image: url('../images/color_logo.png');
+    }
+    #header.active #hmm-gnb a {
+        color: #000;
+    }
+    #header.active .utill-menu li a, #header.active .utill-menu li button {
+        color: #666;
+    }
+    #header.active .sitemap-open-btn {
+        color: #333;
+    }
+
+    /* 스크롤 */
+    #header.fixed {
+        position: fixed;
+        height: 80px;
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+    }
+    #header.fixed h1 {
+        margin: 10px;
+        background-image: url('../images/color_logo.png');
+    }
+    #header.fixed #hmm-gnb {
+        margin-top: 26px;
+    }
+    #header.fixed #hmm-gnb a {
+        display: block;
+        color: #000;
+    }
+    #header.fixed #hmm-gnb .depth2 {
+        top: 53px;
+    }
+    #header.fixed .utill-menu {
+        display: none;
+    }
+    #header.fixed .sitemap-open-btn {
+        bottom: 0;
+        color: #333;
+        margin-top: 30px;
+    }
+
+    #hmm-gnb .depth2 a:hover {
+        color: #000;
+    }
+    #hmm-gnb .depth1:hover > a {
+        /* font-weight: 700; */
+        color: #1f265b !important;
+    }
+    #footer {
+        padding-top: 260px;
+        background-position: center 100px;
+        background-size: 260px;
+    }
+
+}
+@media screen and (min-width: 1920px) {
+    .gototop {
+        right: inherit;
+        left: 50%;
+        margin-left: 860px;
+    }
+}
